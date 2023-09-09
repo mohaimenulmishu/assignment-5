@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                               Text("My ",  style: TextStyle(color: Colors.red,fontSize: 23)),
                               Text("phone ",style: TextStyle(color: Colors.lightBlue,fontSize: 12)),
                               Text("name ",style: TextStyle(color: Colors.purpleAccent,fontWeight: FontWeight.bold)),
-                              Text("Your Phone Name ",style: TextStyle(color: Colors.amber,fontSize: 25)),
+                              Text("Your Phone NameFuckeer ",style: TextStyle(color: Colors.amber,fontSize: 25)),
 
 
                     ],
