@@ -9,54 +9,78 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-              child: Text("Home")),
-          backgroundColor: Colors.green,
-          elevation: 70, // Set the elevation to 70
-          toolbarHeight: 100, // Set the appBar height to 100
-          leading: IconButton(
-            icon: Icon(Icons.home), // Replace 'left_icon' with your desired icon
-            onPressed: () {
-              // Add functionality for the left icon here
-            },
-          ),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search), // Replace 'right_icon' with your desired icon
-              onPressed: () {
-                // Add functionality for the right icon here
-              },
-            ),
-          ],
-        ),
-        body: Center(
-          child: Container(
-            child:Padding(
-              padding: const EdgeInsets.all(50.0),
-              child:  Column(
-                children: [
-                  Text ("This is Mod 5 Assignment" ,style: TextStyle(fontWeight: FontWeight.bold,fontSize:18 )),
-                  Row(
-                    children: [
-                              Text("My ",  style: TextStyle(color: Colors.red,fontSize: 23)),
-                              Text("phone ",style: TextStyle(color: Colors.lightBlue,fontSize: 12)),
-                              Text("name ",style: TextStyle(color: Colors.purpleAccent,fontWeight: FontWeight.bold)),
-                              Text("Your Phone NameFuckeer ",style: TextStyle(color: Colors.amber,fontSize: 25)),
-
-
-                    ],
-                  )
-
-
-                ],
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(100.0),
+          child: AppBar(
+            backgroundColor: Colors.green,
+            elevation: 70.0,
+            title: Center(
+              child: Text(
+                "Home",
+                style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
               ),
             ),
-
-
-
-
-
+            leading: IconButton(
+              icon: Icon(Icons.home), // Replace 'menu' with your desired left icon
+              onPressed: () {
+                // Add functionality for the left icon here
+              },
+            ),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.search), // Replace 'search' with your desired right icon
+                onPressed: () {
+                  // Add functionality for the right icon here
+                },
+              ),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "This is mod 5 Assignment",
+                style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+              ),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "My ",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.redAccent, // Change color for "This"
+                      ),
+                    ),
+                    TextSpan(
+                      text: "phone ",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.blueAccent, // Change color for "is"
+                      ),
+                    ),
+                    TextSpan(
+                      text: "name ",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.purpleAccent,
+                          fontWeight: FontWeight.bold,
+                        // Change color for "my"
+                      ),
+                    ),
+                    TextSpan(
+                      text: "Your phone name",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.orangeAccent, // Change color for "phone"
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
